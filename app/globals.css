@@ -1,26 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind v4: define tokens via @theme so classes like bg-background work */
+@theme {
+  /* Background Colors */
+  --color-background: #1a1a2e; /* Deep navy */
+  --color-foreground: #f8f9fa; /* High contrast white */
+
+  /* Surface Colors */
+  --color-card: #16213e; /* Slightly lighter surface */
+  --color-card-foreground: #f8f9fa; /* High contrast white */
+  --color-popover: #16213e; /* Slightly lighter surface */
+  --color-popover-foreground: #f8f9fa; /* High contrast white */
+
+  /* Muted Colors */
+  --color-muted: #2c3e50; /* Muted background */
+  --color-muted-foreground: #b8bcc8; /* Muted text */
+
+  /* Border and Input */
+  --color-border: rgba(212, 175, 55, 0.2); /* Gold with opacity */
+  --color-input: #16213e; /* Slightly lighter surface */
+  --color-ring: #d4af37; /* Gold accent */
+
+  /* Primary Colors */
+  --color-primary: #d4af37; /* Gold accent */
+  --color-primary-foreground: #1a1a2e; /* Deep navy */
+
+  /* Secondary Colors */
+  --color-secondary: #8b4513; /* Warm brown */
+  --color-secondary-foreground: #f8f9fa; /* High contrast white */
+
+  /* Accent Colors */
+  --color-accent: #ff6b35; /* Vibrant orange */
+  --color-accent-foreground: #f8f9fa; /* High contrast white */
+
+  /* Destructive/Error Colors */
+  --color-destructive: #dc3545; /* Error red */
+  --color-destructive-foreground: #f8f9fa; /* High contrast white */
+  --color-error: #dc3545; /* Error red */
+  --color-error-foreground: #f8f9fa; /* High contrast white */
+
+  /* Success Colors */
+  --color-success: #28a745; /* Success green */
+  --color-success-foreground: #f8f9fa; /* High contrast white */
+
+  /* Warning Colors */
+  --color-warning: #ffc107; /* Warning yellow */
+  --color-warning-foreground: #1a1a2e; /* Deep navy */
+
+  /* Radius */
+  --radius: 0.5rem;
+
+  /* Optional: fonts as tokens (if you want to use font-sans / font-serif utilities) */
+  --font-sans:
+    "Source Sans Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif:
+    "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times,
+    serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
 }
