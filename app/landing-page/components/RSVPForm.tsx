@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Icon from "@/components/common/ui/AppIcon";
 
 interface FormData {
-  name: string;
   attendance: "yes" | "no" | "";
   guestCount: number;
   dietaryPreferences: string;
@@ -18,7 +17,6 @@ type FormErrors = Partial<Omit<FormData, "attendees">> & {
 const RSVPForm = () => {
   const [isHydrated, setIsHydrated] = useState(false);
   const [formData, setFormData] = useState<FormData>({
-    name: "",
     attendance: "",
     guestCount: 1,
     dietaryPreferences: "",
@@ -53,10 +51,6 @@ const RSVPForm = () => {
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = "Por favor ingresa tu nombre";
-    }
 
     if (!formData.attendance) {
       newErrors.attendance = "Por favor selecciona una opción";
@@ -97,7 +91,7 @@ const RSVPForm = () => {
         : "";
 
     const message = encodeURIComponent(
-      `Hola Giovanna, quiero confirmar mi asistencia a tu celebración de 50 años.\n\nNombre: ${formData.name.trim()}\n${attendanceText}${attendeesText}\n`,
+      `Hola Giovanna, quiero confirmar mi asistencia a tu celebración de 50 años.\n\n${attendanceText}${attendeesText}\n`,
     );
 
     window.open(`https://wa.me/+51975791455?text=${message}`, "_blank");
