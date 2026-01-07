@@ -96,7 +96,7 @@ const HeroSection = ({
 
         {/* Name in Script Font */}
         <div className="mb-8 animate-in fade-in zoom-in duration-700 delay-200">
-          <p className="font-script text-6x sm:text-7xl md:text-8xl lg:text-9xl text-primary mb-2 drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+          <p className="font-script text-3xl sm:text-7xl md:text-8xl lg:text-9xl text-primary mb-2 drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">
             Giovanna Huarancca
           </p>
         </div>

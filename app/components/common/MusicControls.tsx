@@ -78,7 +78,7 @@ const MusicControls = ({
   };
 
   return (
-    <div className="fixed top-24 lg:top-8 right-4 lg:right-8 z-[100] flex items-center gap-2">
+    <div className="fixed top-4 md:top-24 lg:top-8 right-4 lg:right-8 z-[100] flex items-center gap-2">
       {showVolumeSlider && (
         <div className="bg-card rounded-lg shadow-celebration p-3 animate-in slide-in-from-right duration-300">
           <div className="flex items-center gap-3">

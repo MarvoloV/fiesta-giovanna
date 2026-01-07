@@ -50,13 +50,11 @@ const WelcomeModal = ({ isOpen = true, onClose }: WelcomeModalProps) => {
         {/* Content */}
         <div className="text-center space-y-6 mt-4">
           <h1 className="font-script text-5xl md:text-7xl text-primary animate-in slide-in-from-top duration-700">
-            Giovanna
+            ¡Estás Invitado!
           </h1>
 
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl md:text-4xl text-foreground animate-in slide-in-from-bottom duration-700 delay-100">
-              ¡Estás Invitado!
-            </h2>
+            <h2 className="font-headline text-3xl md:text-4xl text-foreground animate-in slide-in-from-bottom duration-700 delay-100"></h2>
             <p className="font-body text-lg md:text-xl text-muted-foreground animate-in slide-in-from-bottom duration-700 delay-200">
               A celebrar mis 50 años
             </p>
