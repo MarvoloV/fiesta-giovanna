@@ -89,9 +89,9 @@ const HeroSection = ({
 
         {/* Main Headline */}
         <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground mb-6 animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-          ¡VEN A CELEBRAR
+          🎊 ¡VEN A CELEBRAR
           <br />
-          <span className="text-primary">MIS 50 AÑOS!</span>
+          <span className="text-primary">MIS 50 AÑOS!</span> 🎊
         </h1>
 
         {/* Name in Script Font */}
